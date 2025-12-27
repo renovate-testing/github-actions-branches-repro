@@ -10,16 +10,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       # These actions use branches instead of tags
       # v4 is a branch, not a tag - Renovate cannot pin digest
-      - uses: christopherhx/gitea-upload-artifact@v4
+      - uses: christopherhx/gitea-upload-artifact@81f940d004763f986ba3582c007fd842dd5cb0d7 # v4
         with:
           name: test-artifact
           path: README.md
 
-      - uses: christopherhx/gitea-download-artifact@v4
+      - uses: christopherhx/gitea-download-artifact@75635f32b4c1c41c4b3d64e8f85210112ed4c9c7 # v4
         with:
           name: test-artifact
           path: downloaded
